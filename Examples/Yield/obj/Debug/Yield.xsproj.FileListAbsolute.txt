@@ -4,3 +4,9 @@ C:\Users\Public\Documents\XSharp\Examples\Yield\obj\Debug\Yield.xsproj.AssemblyR
 C:\Users\Public\Documents\XSharp\Examples\Yield\obj\Debug\Yield.xsproj.CoreCompileInputs.cache
 C:\Users\Public\Documents\XSharp\Examples\Yield\obj\Debug\Yield.exe
 C:\Users\Public\Documents\XSharp\Examples\Yield\obj\Debug\Yield.pdb
+D:\MOS\github\XSharp\Examples\Yield\bin\Debug\Yield.exe
+D:\MOS\github\XSharp\Examples\Yield\bin\Debug\Yield.pdb
+D:\MOS\github\XSharp\Examples\Yield\obj\Debug\Yield.xsproj.AssemblyReference.cache
+D:\MOS\github\XSharp\Examples\Yield\obj\Debug\Yield.xsproj.CoreCompileInputs.cache
+D:\MOS\github\XSharp\Examples\Yield\obj\Debug\Yield.exe
+D:\MOS\github\XSharp\Examples\Yield\obj\Debug\Yield.pdb
