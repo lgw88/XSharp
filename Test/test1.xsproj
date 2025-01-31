@@ -1,0 +1,128 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(XSharpMsBuildDir)\XSharp.Default.props" />
+  <PropertyGroup>
+    <Name>test1</Name>
+    <ProjectGuid>{C82F317C-70BB-4F88-BBA3-57A160395FEA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>test1</RootNamespace>
+    <AssemblyName>test1App</AssemblyName>
+    <TargetFrameworkVersion>4.7.2</TargetFrameworkVersion>
+    <NoLogo>true</NoLogo>
+    <GenerateFullPaths>true</GenerateFullPaths>
+    <Dialect>FoxPro</Dialect>
+    <AllowOldStyleAssignments>True</AllowOldStyleAssignments>
+    <LB>true</LB>
+    <OutputName>test1</OutputName>
+    <Undeclared>true</Undeclared>
+    <MemVar>true</MemVar>
+    <AllowOldStyleAssignments>true</AllowOldStyleAssignments>
+    <Allowdot>true</Allowdot>
+    <Vo9>true</Vo9>
+    <Vo15>true</Vo15>
+    <Ins>true</Ins>
+    <StandardDefs>$(Solutiondir)XSharp\VFPXPorter.xh</StandardDefs>
+    <Fox1>true</Fox1>
+    <InitLocals>true</InitLocals>
+    <NamedArgs>false</NamedArgs>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="XSharp.Core">
+      <Name>XSharp.Core</Name>
+      <AssemblyName>XSharp.Core.dll</AssemblyName>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>C:\Program Files (x86)\XSharp\Assemblies\XSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="XSharp.RT">
+      <Name>XSharp.RT</Name>
+      <AssemblyName>XSharp.RT.dll</AssemblyName>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>C:\Program Files (x86)\XSharp\Assemblies\XSharp.RT.dll</HintPath>
+    </Reference>
+    <Reference Include="XSharp.RDD">
+      <Name>XSharp.RDD</Name>
+      <AssemblyName>XSharp.RDD.dll</AssemblyName>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>C:\Program Files (x86)\XSharp\Assemblies\XSharp.RDD.dll</HintPath>
+    </Reference>
+    <Reference Include="XSharp.Data">
+      <Name>XSharp.Data</Name>
+      <AssemblyName>XSharp.Data.dll</AssemblyName>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>C:\Program Files (x86)\XSharp\Assemblies\XSharp.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="XSharp.VFP">
+      <Name>XSharp.VFP</Name>
+      <AssemblyName>XSharp.VFP.dll</AssemblyName>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>C:\Program Files (x86)\XSharp\Assemblies\XSharp.VFP.dll</HintPath>
+    </Reference>
+    <Reference Include="XSharp.VFP.UI">
+      <Name>XSharp.VFP.UI</Name>
+      <AssemblyName>XSharp.VFP.UI.dll</AssemblyName>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>XSharp\XSharp.VFP.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\main_Form1.prg">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\main_Form1.designer.prg">
+      <DependentUpon>main_Form1.prg</DependentUpon>
+    </Compile>
+    <Compile Include="Code\main.prg" />
+    <Compile Include="XSharp\Helpers.prg" />
+    <None Include="XSharp\VFPCmd.xh" />
+    <None Include="XSharp\VFPXPorter.xh" />
+    <Compile Include="VFPStart.prg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Code\" />
+    <Folder Include="Forms\" />
+    <Folder Include="XSharp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\main_Form1.resx">
+      <DependentUpon>main_Form1.prg</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <EmitDebugInformation>True</EmitDebugInformation>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>VFP2XS;DEBUG;TRACE</DefineConstants>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DisabledWarnings>XS9025;XS9043</DisabledWarnings>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <EmitDebugInformation>False</EmitDebugInformation>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <DefineConstants>VFP2XS;TRACE</DefineConstants>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DisabledWarnings>XS9025;XS9043</DisabledWarnings>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(XSharpMsBuildDir)\XSharp.targets" />
+</Project>
