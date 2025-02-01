@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{AA6C8D78-22FF-423A-9C7C-5F2393824E04}") = "Yield", "Yield\Yield.xsproj", "{AAA5D7CF-FEAE-438E-9806-685AC6709FB4}"
 EndProject

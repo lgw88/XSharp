@@ -1,7 +1,8 @@
 *.bak
 VFP
 Backup
-.vs
 *.log
 Release
 Debug
+.vs
+

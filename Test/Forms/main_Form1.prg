@@ -12,45 +12,45 @@ USING XSharp.VFP.UI
 // Templates/Form/StartType.prg
 
 PUBLIC PARTIAL CLASS Form1 ;
-		INHERIT XSharp.VFP.UI.Form
+    INHERIT XSharp.VFP.UI.Form
 
-		
-		
-				
+
+
+
 
 PUBLIC CONSTRUCTOR( InitParamsList ) CLIPPER
-	Super( InitParamsList )
+	SUPER( InitParamsList )
 	//
 	PreInitializeComponent()
 	InitializeComponent()
 	InitContainers()
 	InitGrids()
 	SetDataEnvironment()
-	
+
 
 PRIVATE METHOD PreInitializeComponent() AS VOID
-    self:components := System.ComponentModel.Container{}
+    SELF:components := System.ComponentModel.Container{}
     SELF:_vfpToolTip	:=	System.Windows.Forms.ToolTip{SELF:components}
-	
-PRIVATE METHOD InitContainers() AS Void
-	// The following lines contains EventHandlers settings for Child-elements of CustomControls
-	
 
-PRIVATE METHOD InitGrids() AS Void
+PRIVATE METHOD InitContainers() AS VOID
+	// The following lines contains EventHandlers settings for Child-elements of CustomControls
+
+
+PRIVATE METHOD InitGrids() AS VOID
 	// The following lines contains settings for Columns of Grids
-	
+
 
 VIRTUAL METHOD SetDataEnvironment() AS VOID
-	SELF:Dataenvironment := DataEnvironment{}
+	SELF:Dataenvironment := Dataenvironment{}
 SELF:Dataenvironment:DataSource := .NULL.
 SELF:Dataenvironment:Name := "Dataenvironment"
 SELF:Dataenvironment:Init( )
-SELF:FormClosing += System.Windows.Forms.FormClosingEventHandler{ SELF:Dataenvironment, @DataEnvironment.DataEnvironment_FormClosing() }
+SELF:FormClosing += System.Windows.Forms.FormClosingEventHandler{ SELF:Dataenvironment, @Dataenvironment.DataEnvironment_FormClosing() }
 DoBindings()
 
 
 
-	
+
 
 //
 METHOD Command1_Click
@@ -59,6 +59,13 @@ METHOD Command1_Click
 VAR thisObject := Command1
 
 MESSAGEBOX(thisform.Text1.Value)
+*ACTIVATE SCREEN
+CREATE CURSOR aaa (A1 I , A2 C(10))
+INSERT INTO aaa (A1,A2) VALUES (1,"abc")
+ thisform.Text1.Value = aaa.a2
+
+*BROWSE
+USE IN aaa
 END METHOD
 
 
@@ -72,6 +79,9 @@ CLEAR EVENTS
 thisform.Release()
 
 END METHOD
+    PRIVATE METHOD Command1_Click(sender AS System.Object, e AS System.EventArgs) AS VOID STRICT
+        RETURN
+    END METHOD
 
 
 
@@ -79,4 +89,4 @@ END METHOD
 
 
 
-	END CLASS
+	END CLASS 

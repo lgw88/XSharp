@@ -2,7 +2,7 @@
   <Import Project="$(XSharpMsBuildDir)\XSharp.Default.props" />
   <PropertyGroup>
     <Name>test1</Name>
-    <ProjectGuid>{C82F317C-70BB-4F88-BBA3-57A160395FEA}</ProjectGuid>
+    <ProjectGuid>{1DAF8967-1581-4732-A7D7-A096A5B04800}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>test1</RootNamespace>

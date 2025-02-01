@@ -34,7 +34,7 @@ CLASS TestClass
 		webClient:DownloadProgressChanged += OnDownloadProgress
         webClient:Credentials := System.Net.CredentialCache.DefaultNetworkCredentials
 
-        AWAIT webClient:DownloadFileTaskAsync("http://google.com", FileName)
+        AWAIT WebClient:DownloadFileTaskAsync("http://baidu.com", FileName)
         VAR dirInfo      := System.IO.DirectoryInfo{System.IO.Path.GetTempPath()}
         VAR Files        := dirInfo:GetFiles("temp.txt")
         IF Files:Length > 0
